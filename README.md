@@ -21,6 +21,7 @@ The project follows a structured progression:
 
   2. A **Brownian Bridge Monte Carlo** method, which corrects for the discretization bias of the naive approach by analytically modeling the behavior of the process between simulation points.
 
+
 For each of these methods, we first explain the theoretical and mathematical foundations. We then describe their practical implementation, detailing the simulation procedures, path tracking mechanisms, and payoff evaluations.
 
 To enhance the quality of the Monte Carlo estimates, we further incorporate an **adaptive antithetic variance reduction** technique. The method is first introduced from a theoretical standpoint, and we then detail its practical implementation on top of both the naive and Brownian Bridge Monte Carlo simulations.
@@ -28,11 +29,11 @@ To enhance the quality of the Monte Carlo estimates, we further incorporate an *
 - **Results Analysis**:  
 We conclude the project with a structured evaluation of the pricing methods across three key dimensions:
 
-  1. **Bias**: We begin by analyzing the intrinsic bias of each estimator. As expected, the naive Monte Carlo method exhibits a structural discretization bias of order \( \mathcal{O}(\sqrt{\Delta t}) \), which remains even as the number of paths increases. The Brownian Bridge estimator corrects this bias significantly, and the Laplace transform method, being analytical, is unbiased by construction.
+  1. **Bias**: We begin by analyzing the intrinsic bias of each estimator. As expected, the naive Monte Carlo method exhibits a structural discretization bias of order \( \mathcal{O}(\sqrt{\Delta t}) \), which remains even as the number of paths increases. The Brownian Bridge estimator corrects this     bias significantly, and the Laplace transform method, being analytical, is unbiased by construction.
 
-2. **Variance**: We then compare the raw variance of each method. The naive Monte Carlo estimator exhibits high variance, especially for options with low activation probabilities. The Brownian Bridge method achieves lower variance by more accurately capturing barrier excursions. When combined with adaptive antithetic variance reduction, both Monte Carlo methods experience dramatic reductions in variance — ranging from factors of 10⁴ to 10⁶—while the Laplace method, being deterministic, has no variance by construction.
+  2. **Variance**: We then compare the raw variance of each method. The naive Monte Carlo estimator exhibits high variance, especially for options with low activation probabilities. The Brownian Bridge method achieves lower variance by more accurately capturing barrier excursions. When combined with     adaptive antithetic variance reduction, both Monte Carlo methods experience dramatic reductions in variance — ranging from factors of 10⁴ to 10⁶—while the Laplace method, being deterministic, has no variance by construction.
 
-3. **Speed and Practical Efficiency**: Finally, we assess the computational cost of each method. The Laplace transform approach is nearly instantaneous (sub-second execution), whereas the naive and Brownian Bridge simulations require between 16 and 30 seconds to generate 1 million trajectories with 500 discretization steps, depending on the setup. The additional cost introduced by variance reduction remains modest and is well justified by the significant gains in estimator precision.
+  3. **Speed and Practical Efficiency**: Finally, we assess the computational cost of each method. The Laplace transform approach is nearly instantaneous (sub-second execution), whereas the naive and Brownian Bridge simulations require between 16 and 30 seconds to generate 1 million trajectories with    500 discretization steps, depending on the setup. The additional cost introduced by variance reduction remains modest and is well justified by the significant gains in estimator precision.
 
 All implementation details—including optimization choices and code structure—are documented in the Appendix. We also include screenshots of key numerical results to illustrate the output of each method. The full Python Jupyter notebook used for this project is provided in the repository, allowing readers to reproduce the experiments, inspect the algorithms, and explore the results interactively.
 
