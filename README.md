@@ -21,7 +21,7 @@ The project follows a structured progression:
 
   2. A **Brownian Bridge Monte Carlo** method, which corrects for the discretization bias of the naive approach by analytically modeling the behavior of the process between simulation points.
 
-  For each of these methods, we first explain the theoretical and mathematical foundations. We then describe their practical implementation, detailing the simulation procedures, path tracking mechanisms, and payoff evaluations.
+For each of these methods, we first explain the theoretical and mathematical foundations. We then describe their practical implementation, detailing the simulation procedures, path tracking mechanisms, and payoff evaluations.
 
 To enhance the quality of the Monte Carlo estimates, we further incorporate an **adaptive antithetic variance reduction** technique. The method is first introduced from a theoretical standpoint, and we then detail its practical implementation on top of both the naive and Brownian Bridge Monte Carlo simulations.
 
