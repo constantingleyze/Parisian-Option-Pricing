@@ -36,11 +36,11 @@ We conclude the project with a structured evaluation of the pricing methods acro
 
   3. **Speed and Practical Efficiency**: Finally, we assess the computational cost of each method. The Laplace transform approach is nearly instantaneous (sub-second execution), whereas the naive and Brownian Bridge simulations require between 16 and 30 seconds to generate 1 million trajectories with    500 discretization steps, depending on the setup. The additional cost introduced by variance reduction remains modest and is well justified by the significant gains in estimator precision.
 
-**Implementation Details**:  
-All implementation decisions - including algorithmic design and optimization techniques - are documented in the **Appendix**. This includes justifications for performance-related choices made in our code.
+**Programming and Optimization Choices**:  
+In **Appendix 2**, we detail our choice of programming language as well as the optimization techniques used to handle large-scale simulations efficiently. This includes the use of Python, performance-focused libraries, and implementation strategies aimed at reducing computation time.
 
 **Visual Outputs**:  
-We also provide **screenshots of selected results**, including pricing tables and graphical comparisons, to give a quick visual overview of each method’s behavior under different configurations.
+We also provide in **Appendix 3** screenshots of selected results, including pricing tables and graphical comparisons, to give a quick visual overview of each method’s behavior under different configurations.
 
 **Interactive Notebook**:  
 The full project is available as a **Python Jupyter notebook** within the repository. This allows readers to easily reproduce our simulations, explore parameter variations, and consult the implemented algorithms in a clear, executable format.
