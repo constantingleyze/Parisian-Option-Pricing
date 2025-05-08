@@ -5,7 +5,7 @@ This repository provides a theoretical and computational study of **Parisian opt
 In particular, we focus on the implementation of a pricing method based on **Laplace transforms**, which enables fast and accurate valuation of these complex derivatives. This approach is rooted in a seminal paper using explicit Laplace expressions and controlled numerical inversion.
 
 > **Reference paper:**  
-> Labart, C., & Lelong, J. (2009). *Pricing Parisian options using Laplace transforms*. *Bankers, Markets & Investors*, 99, 24p.
+> Céline Labart, Jérôme Lelong. Pricing Parisian options using Laplace transforms. Bankers Markets & Investors : an academic & professional review, 2009, 99, 24 p. ffhal-00776703
 
 ## Content
 
